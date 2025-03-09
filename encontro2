@@ -1,0 +1,365 @@
+\documentclass{beamer}
+\usepackage{amsmath}
+
+\begin{document}
+
+\title{Progressão Aritmética e Progressão Geométrica}
+\author{Cláudia Silva Tavares}
+\date{\today}
+
+\frame{\titlepage}
+
+\section{Progressão Aritmética (PA)}
+\begin{frame}{Problema}
+Considere a sequência:
+\[2, 5, 8, 11, 14, \dots\]
+Qual a relação entre seus termos?
+\begin{itemize}
+    \item O primeiro termo da sequência é 2.
+    \item O segundo termo é 5 e $5 - 2 = 3$.
+    \item O terceiro termo é 8 e $8 - 5 = 3$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Definição de PA}
+\textbf{Definição}: Uma Progressão Aritmética é uma sequência de números reais na qual a diferença entre dois termos consecutivos é constante. Essa constante é chamada de \textbf{razão} da PA e é representada pela letra $r$.
+\begin{itemize}
+    \item Primeiro termo: $ a_1 = 2 $.
+    \item Razão: $ r = 3 $ (cada termo aumenta em 3).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Fórmula do Termo Geral}
+A razão de uma PA é constante, então podemos calcular seu valor com:
+\[
+    r = a_2 - a_1 = a_3 - a_2 = \dots = a_n - a_{n-1}
+\]
+	$$
+	r = a_2 - a_1 ~~ \Rightarrow ~~	a_2 = a_1 +r 
+	$$
+	
+	Para encontrar o terceiro termo utilizaremos o mesmo cálculo:
+	
+	$$
+	r = a_3 - a_2  ~~\Rightarrow ~~	a_3 = a_2 +r 
+	$$
+	
+	Substituindo o valor de a2, que encontramos anteriormente, temos:
+
+
+	$$
+	a_3 = a_1 + r + r = a_1 + 2r  
+	$$
+    
+Se seguirmos o mesmo raciocínio, podemos encontrar a fórmula do termo geral:
+\[
+    a_n = a_1 + (n - 1)r
+\]
+\end{frame}
+
+
+\begin{frame}{Fórmula do Termo Geral - Exemplo}
+ Na sequência com 
+ \\
+        - primeiro termo: \( a_1 = 2 \)  \\
+	- Razão: \( r = 3 \)  \\
+    \\
+    \\
+Para encontrar o 10º termo fazemos
+\[
+    a_{10} = 2 + (10 - 1) \cdot 3 = 2 + 27 = 29
+\]
+\end{frame}
+
+\begin{frame}{Atividades}
+    
+	\begin{enumerate}
+		
+		\item Em uma PA, o que acontece com a sequência se a razão for negativa? E se for zero?
+		
+		\item Se em uma PA \(a_1 = 5\), \(a_5 = 17\), determine a razão \(r\) dessa progressão.
+		
+		\item Determine o 10º termo da PA em que o primeiro termo é \( a_1 = 3 \) e a razão \( r = 4 \).
+		
+		\item Sabendo que uma PA tem primeiro termo \( a_1 = 7 \) e quinto termo \( a_5 = 31 \), determine sua razão e o décimo termo.
+		
+	\end{enumerate}
+    \end{frame}
+
+\begin{frame}{Propriedades}
+    \textbf{1ª propriedade:} Em uma P.A. finita, a soma de dois termos equidistantes dos extremos é igual à soma dos extremos.
+	$$
+	a_1+a_n = a_2+ a_{n-1}=a_3+a_{n-2}=...
+	$$
+	\textbf{Exemplo} Considere a sequência:
+	\[
+	4, 12, 20, 28, 36, 44, 52
+	\]
+	Observamos que 
+	
+	\[
+	~~~~~~~4~~~~~~+~~~~~~~52 ~ = ~ 56
+	\]
+	e
+	
+	\[
+	~~~~~~~20~+~36 ~ = ~ 56
+	\]
+\end{frame}
+
+\begin{frame}{Propriedades}
+    \textbf{2ª propriedade:} Considerando três termos consecutivos de uma P.A., o termo do meio será igual a média aritmética dos outros dois termos.
+	$$
+	\frac{a_i + a_{i+2}}{2} = a_{i+1}
+	$$
+	\textbf{Exemplo} Considere a sequência:
+	
+	\[
+	4, 12, 20, 28, 36, 44, 52
+	\]
+	Observamos que 
+	
+	\[
+	\frac{20+36}{2} = 28
+	\]	
+\end{frame}
+
+\begin{frame}{Propriedades}
+    	\textbf{3ª propriedade:} Em uma P.A. finita com número de termos ímpar, o termo central será igual a média aritmética entre termos equidistantes deste. Esta propriedade deriva da primeira.\\
+	\\
+	\textbf{Exemplo} Considere a sequência:
+	
+	\[
+	4, 12, 20, 28, 36, 44, 52
+	\]
+	Observamos que 
+	
+	\[
+	\frac{52+4}{2} = 28
+	\]	
+\end{frame}
+
+  \begin{frame}{Soma dos Termos de uma PA}
+      Queremos calcular a soma dos $n$ termos
+    $$
+    S_n = \sum_{i=1}^{n}a_i = a_1 + a_2 + a_3 + a_4 + ... a_{n-1}+ a_n
+    $$
+    Vamos reescrever a soma começando de $a_n$
+    $$
+    S_n = a_n + a_(n-1) + ...+ a_3 + a_2 + a_1
+    $$ 
+    e então somando as duas formas
+    $$
+    2S_n = (a_1 + a_n) + (a_2+ a_{n-1}) + ...+ ( a_{n-1}+a_2) + (a_n+a_1)
+    $$
+    Usando a primeira propriedade da PA, temos
+     $$
+    2S_n = (a_1 + a_n) + (a_1 + a_n) + ...+ (a_1 + a_n) = n (a_1 + a_n)
+    $$
+  \end{frame} 
+
+  
+\begin{frame}{Soma dos Termos de uma PA}
+
+A soma dos $n$ primeiros termos de uma PA é dada por:
+\[
+    S_n = \frac{n}{2} (a_1 + a_n)
+\]
+Ou:
+\[
+    S_n = \frac{n}{2} \left[ 2a_1 + (n - 1)r \right]
+\]
+\end{frame}
+
+\begin{frame}{Atividades}
+\begin{enumerate}
+    \item Encontre a soma dos 20 primeiros termos da PA $2, 5, 8, 11, \dots$.
+    \item Encontre o número de termos da PA \( 3, 7, 11, \dots, 123 \).
+
+\item A soma dos 10 primeiros termos de uma PA é 220. Se o primeiro termo for 4, determine a razão da PA.
+
+\item O quinto termo de uma PA é 20, e a soma dos sete primeiros termos é 105. Determine o primeiro termo e a razão da PA.
+
+\item Uma empresa oferece um salário inicial de 1.500,00 reais e um aumento anual fixo de 200,00 reais. Determine o salário no décimo ano e a soma dos salários recebidos nos primeiros 15 anos.
+
+\item Uma escada possui 12 degraus e cada degrau tem altura 18 cm. Determine a altura do último degrau em relação ao chão.
+\end{enumerate}
+
+
+\end{frame}
+
+\section{Progressão Geométrica (PG)}
+\begin{frame}{Definição de PG}
+Uma Progressão Geométrica (PG) é uma sequência numérica que possui uma razão fixa $q$ e, a partir do primeiro termo, os termos são calculados multiplicando a razão pelo seu antecessor.
+\end{frame}
+
+\begin{frame}{Fórmula do Termo Geral da PG}
+\textbf{Exemplo:} Vamos escrever termos da PG de razão $3$ em que o primeiro termo é $2$:
+
+\begin{align*}
+	a_1 &= 2 \\
+	a_2 &= 2 \cdot 3 = 6 \\
+	a_3 &= 6 \cdot 3 = 2 \cdot 3 \cdot 3 = 18 \\
+	a_4 &= 18 \cdot 3 = 2 \cdot 3 \cdot 3 \cdot 3 = 54 \\
+	a_5 &= 54 \cdot 3 = 2 \cdot 3 \cdot 3 \cdot 3 \cdot 3 = 162
+\end{align*}
+A PG do exemplo é, portanto, $(2,6,18,54,162,\dots)$.\\
+\\
+
+\end{frame}
+
+
+\begin{frame}{Fórmula do Termo Geral da PG}
+A fórmula do termo geral de uma PG é:
+\[
+    a_n = a_1 \cdot q^{(n-1)}
+\]
+Exemplo: Encontre o 9º termo de uma PG com $a_1 = 3$ e $q = 5$.
+\[
+    a_9 = 3 \cdot 5^{(9-1)} = 3 \cdot 390625 = 1.171.875.
+\]
+\end{frame}
+
+\begin{frame}{Razão da PG}
+    
+A razão de uma PG pode ser encontrada dividindo um termo pelo seu antecessor:\\
+\\
+\textbf{Exemplo:} $(1, 2, 4, 8, 16, 32)$
+
+\begin{align*}
+	q = \frac{2}{1} = \frac{4}{2} = \frac{8}{4} = \frac{16}{8} = \frac{32}{16} = 2.
+\end{align*}
+
+\end{frame}
+
+
+\begin{frame}{Propriedades}
+
+\textbf{1ª Propriedade}
+O produto de termos equidistantes dos extremos é sempre igual.\\
+\\
+\textbf{Exemplo:} $(2, 8, 32, 128, 512, 2048)$
+
+\begin{align*}
+	2 \cdot 2048 &= 4096 \\
+	8 \cdot 512 &= 4096 \\
+	32 \cdot 128 &= 4096
+\end{align*}
+\end{frame}
+
+
+\begin{frame}{Propriedades}
+    Se a PG tem um número ímpar de termos, o termo central ao quadrado é igual ao produto dos equidistantes:\\
+\\
+\textbf{Exemplo:} $(1, 2, 4, 8, 16, 32, 64)$
+
+\begin{align*}
+	1 \cdot 64 &= 64 \\
+	2 \cdot 32 &= 64 \\
+	4 \cdot 16 &= 64 \\
+	8 \cdot 8 &= 64
+\end{align*}
+\end{frame}
+
+\begin{frame}{Propriedades}
+    \textbf{2ª Propriedade} O termo central de uma PG é sua média geométrica.\\
+\\
+\textbf{Exemplo:} $(1, 2, 4, 8, 16, 32, 64)$\\
+\\
+Temos 7 termos então
+$$
+\sqrt[7]{1.2.4.8.16.32.64}=\sqrt[7]{2097152}=8
+$$
+\end{frame}
+
+\begin{frame}{Classificação de uma PG}
+
+    \textbf{Crescente}: $q > 1$. Exemplo: $(2, 10, 50, 250, \dots)$, $q = 5$.\\
+\\
+\textbf{Constante}: $q = 1$. Exemplo: $(2, 2, 2, 2, 2)$.\\
+\\
+\textbf{Decrescente}: $0 < q < 1$. Exemplo: $(100, 50, 25, 12.5, \dots)$, $q = 0.5$.\\
+\\
+\textbf{Oscilante}: $q < 0$. Exemplo: $(1, -4, 8, -32, 128, \dots)$, $q = -2$.
+\end{frame}
+
+\begin{frame}{Atividades}
+
+\begin{enumerate}
+	
+	\item Escreva uma PG:\\
+	a) de 5 termos, onde $a_1$ = 2 e q=3\\
+	b) de 4 termos, onde $a_1$ = - 2 e q = 2\\
+	c) de 6 termos, onde $a_1$ = 1/2 e q = -2\\
+	d) de 5 termos, onde $a_1$ = 1/2 e q = -1/3 
+	
+	\item Sabendo que o primeiro termo de uma PG é positivo, o quarto termo é 192 e o segundo termo é 12, calcule o primeiro e o sétimo termo. 
+	
+	\item Numa festa, quando a música começou a tocar, os casais começaram a entrar na pista de dança. Uma pessoa reparou que a cada minuto cada casal na pista chamava outro casal. Se havia um casal na pista quando a música começou, quantas pessoas estavam na pista após 5 minutos de música? 
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Soma dos Termos de uma PG}
+Consideremos que os termos da sequência
+$$
+a_1, a_2, ...,a_n
+$$
+estão em progressão geométrica de razão $q$. Então a soma dos termos será
+$$
+S_n = \sum_{i=1}^{n} a_i =  a_1 + a_2 + ... + a_n
+$$
+Daí
+    $$ qS_n = q\sum_{i=1}^{n} a_i = \sum_{i=1}^{n} qa_i = qa_1 + qa_2 + ... + qa_n$$
+         $$  = a_2 +  a_3 + ... + a_{n+1} = \sum_{i=2}^{n+1} a_i$$
+         \\
+Fazendo
+$$
+S_n - qS_n = \sum_{i=1}^{n} a_i - \sum_{i=2}^{n+1} a_i = a_1 - a_{n+1} = 
+a_1 - q^na_1 = a_1(1-q^n)
+$$
+\end{frame}
+
+
+
+\begin{frame}{Soma dos Termos de uma PG}
+A soma dos primeiros $n$ termos de uma PG é dada por:
+\[
+    S_n = \frac{a_1 (1 - q^n)}{1 - q}, \quad \text{se } q \neq 1.
+\]
+Exemplo: Para calcular a soma dos 10 primeiros termos da PG $3,6,12,24,\dots$:
+\[
+    S_{10} = \frac{3(1 - 2^{10})}{2 - 1} = 3(1024 - 1) = 3 \cdot 1023 = 3069.
+\]
+\end{frame}
+
+\begin{frame}{Atividades}
+
+
+\begin{enumerate}
+	
+	\item  Num quadrado de 1m de lado, tomamos o ponto médio de cada lado e traçamos outro quadrado, inscrito no primeiro. Repetindo esse processo indefinidamente, qual será a soma das áreas de todos os quadrados obtidos?
+	
+	\item Determine a fração geratriz da dízima periódica 0,1717... 
+	
+	\item Um capital Co é investido a $10\%$ ao ano de juros compostos.
+	\\
+	a) Qual é o valor obtido após 5 anos?\\
+	b) Usando o conceito de PG, escreva o termo geral que fornece o montante obtido de um capital (considere $a_1$ como o capital inicial).\\
+	c) Escreva os montantes obtidos de um capital inicial de $R\$ 1000,00$ a cada um dos primeiros 10 anos.\\
+	d) Escreva os termos dessa PG.
+\end{enumerate}
+
+\end{frame}
+\begin{frame}{Aplicações na Ciência da Computação}
+    
+A Progressão Aritmética aparece em diversas situações na computação, incluindo:\\
+\textbf{Análise de algoritmos}: Cálculo de complexidade em algoritmos iterativos (por exemplo, somatórias aritméticas em loops).\\
+\textbf{Alocação de memória}: Em estruturas como arrays dinâmicos, onde o espaço é frequentemente expandido em progressão aritmética.\\
+\\
+\textbf{Gráficos e animação}: Cálculo de espaçamento uniforme entre elementos visuais.
+
+\end{frame}
+
+
+
+\end{document}
