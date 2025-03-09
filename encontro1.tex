@@ -1,0 +1,408 @@
+\documentclass{beamer} % Rename the file to remove spaces and special characters, e.g., 'encontro1-somatorio-definicao-e-propriedades.tex'
+\usepackage{amsmath, graphicx}
+\usetheme{Madrid}
+
+\title{Somatórios}
+\author{Professores Claudia Tavares e Luiz Otávio Rodrigues Alves Sereno}
+\date{Curso: Ciência da Computação}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{center}
+    \vspace{-0.9cm}
+        \includegraphics[width=0.25\textwidth]{logopuc.png} \hspace{1.4cm}
+        \includegraphics[width=0.25\textwidth]{logoicei.jpg}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Definição}
+    
+    O \textbf{somatório} é uma notação matemática usada para representar a soma de uma sequência de termos. Ele é indicado pelo símbolo \(\displaystyle \sum\) (sigma maiúsculo) e é definido da seguinte forma:
+    $$
+    \displaystyle \sum_{i=a}^{b} f(i)
+    $$
+    Isso significa que estamos somando os valores da função \( f(i) \) para cada \( i \) inteiro no intervalo de \( a \) até \( b \).
+\end{frame}
+
+\begin{frame}{Exemplo 1: Somatório de uma sequência de números}
+    
+Se quisermos somar os primeiros 5 números naturais, podemos escrever:
+
+    \[
+    \displaystyle \sum_{i=1}^{5} i = 1 + 2 + 3 + 4 + 5 = 15
+    \]
+\end{frame}
+
+\begin{frame}{Exemplo 2: Somatório de uma função}
+    
+    
+    Se tivermos a função \( f(i) = i^2 \), o somatório de \( i^2 \) de 1 a 3 seria:
+    \[
+    \displaystyle \sum_{i=1}^{3} i^2 = 1^2 + 2^2 + 3^2 = 1 + 4 + 9 = 14
+    \]
+\end{frame}
+
+\begin{frame}{Atividades}
+    
+\textbf{Expanda e calcule o valor das seguintes somas:}
+    \begin{itemize}
+        \item $ \displaystyle \sum_{k=1}^{5} k $
+        \item $ \displaystyle \sum_{n=1}^{4} (2n + 1)$
+        \item $ \displaystyle \sum_{i=1}^{6} 3 $
+    \end{itemize}
+\end{frame}
+    
+\begin{frame}{Atividades}
+    
+\textbf{Reescreva as somas a seguir na notação de somatório:}
+    \begin{itemize}
+        \item $ 2 + 4 + 6 + 8 + 10 $
+        \item $ 1^2 + 2^2 + 3^2 + \dots + 10^2 $
+        \item $ 3 + 6 + 9 + 12 + 15 + 18 $
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Propriedades}
+    
+As propriedades do somatório nos ajudam a manipulá-lo e a encontrar o valor da soma.
+
+\end{frame}
+
+\begin{frame}{Propriedade 1. Somatório de uma Constante}
+	
+	Se somarmos uma constante \( c \) \( n \) vezes, o resultado será:
+	
+	\[
+	\sum_{k=1}^{n} c = c \cdot n
+	\]
+	\textbf{Exemplo}  
+	\[
+	\sum_{k=1}^{7} 5 = 5 \times 7 = 35
+	\]
+\end{frame}
+
+\begin{frame}{Propriedade 2. Somatório do Produto por uma Constante}
+	
+	Se \( k \) for uma constante e \( a_i \) uma sequência qualquer, então:
+	
+	\[
+	\sum_{i=p}^{n} k \cdot a_i = k \cdot a_p + k \cdot a_{p+1} + k \cdot a_{p+2} + \dots + k \cdot a_n
+	\]
+	
+	Reescrevendo:
+	
+	\[
+	\sum_{i=p}^{n} k \cdot a_i = k \cdot \left( a_p + a_{p+1} + a_{p+2} + \dots + a_n \right)
+	\]
+	
+	Ou seja:
+	
+	\[
+	\sum_{i=p}^{n} k \cdot a_i = k \cdot \sum_{i=p}^{n} a_i
+	\]
+
+\end{frame}    
+	
+\begin{frame}{Propriedade 2: Somatório do Produto por uma constante}
+	\textbf{Exemplo}  
+    
+	\[
+	\sum_{i=1}^{5} 3 \cdot i = 3 \sum_{i=1}^{5} i = 3(1+2+3+4+5)=45
+	\]
+
+    \end{frame}
+	
+\begin{frame}{Propriedade 3. Somatório de uma Soma Algébrica}
+	
+	Se \( a_i \) e \( b_i \) são duas sequências, então:
+	
+	\[
+	\sum_{i=p}^{n} (a_i \pm b_i) = (a_p \pm b_p) + (a_{p+1} \pm b_{p+1}) + (a_{p+2} \pm b_{p+2}) + \dots + (a_n \pm b_n)
+	\]
+	Reescrevendo	
+	\[
+	\sum_{i=p}^{n} (a_i \pm b_i) = \sum_{i=p}^{n} a_i \pm \sum_{i=p}^{n} b_i
+	\]
+
+\end{frame}
+
+\begin{frame}{Propriedade 3. Somatório de uma Soma Algébrica}
+	\textbf{Exemplo}  
+	\[
+	\sum_{i=1}^{4} (2i + 3) = \sum_{i=1}^{4} 2i + \sum_{i=1}^{4} 3
+	\]
+	
+	Calculando separadamente:
+	
+	\[
+	\sum_{i=1}^{4} 2i = 2(1+2+3+4) = 2(10) = 20
+	\]
+	
+	\[
+	\sum_{i=1}^{4} 3 = 3.4 = 12
+	\]
+	
+	Logo:
+	
+	\[
+	\sum_{i=1}^{4} (2i + 3) = 20 + 12 = 32
+	\]
+\end{frame}	
+\begin{frame}{Propriedade 4: Separação do Último Termo}
+	
+	A soma de termos de \( p \) até \( n \) pode ser escrita como:
+	
+	\[
+	\sum_{i=p}^{n} a_i = \sum_{i=p}^{n-1} a_i + a_n
+	\]
+	
+	\textbf{Exemplo:}
+	
+	$$
+	\sum_{i=1}^{5} i = \sum_{i=1}^{4} i + 5 = 10 + 5 = 15
+        $$
+\end{frame}
+	
+\begin{frame}{Propriedade 4: Separação do Primeiro Termo}
+	
+	A soma de termos de \( p \) até \( n \) pode ser escrita como:
+	
+	$$
+	\sum_{i=p}^{n} a_i = a_p + \sum_{i=p+1}^{n} a_i
+	$$
+	
+	\textbf{Exemplo:}
+	
+	$$
+	\sum_{i=1}^{5} i = 1 + \sum_{i=2}^{5} i = 1 + 14 = 15
+	$$
+
+\end{frame}
+	
+%\begin{frame}{Propriedade Telescópica}
+	
+%	A propriedade telescópica ocorre quando somamos termos da forma 
+%    $$ 
+%    a_{k+1} - a_k
+%    $$
+%	Temos que
+%	$$
+%	\sum_{i=p}^{n} (a_{i+1} - a_i) =
+%    $$
+
+%    $$
+%	=(a_{p+1} - a_p) + (a_{p+2} - a_{p+1}) + (a_{p+3} - a_{p+2}) + \dots + (a_{n} - a_{n-1}) +(a_{n+1} - a_n)
+%	$$
+	
+%	Observamos que todos os termos intermediários se cancelam, restando:
+	
+%	\[
+%	=a_{n+1} - a_p
+%	\]
+	
+%	Ou seja:
+	
+%	\[
+%	\sum_{i=p}^{n} (a_{i+1} - a_i) = a_{n+1} - a_p
+%	\]
+%    \end{frame}
+
+    
+\begin{frame}{Atividades}
+	\begin{enumerate}
+		\item Calcule os seguintes somatórios
+		\begin{enumerate}
+			\item $\displaystyle \sum_{i=1}^{20} 1$\\
+			\item $\displaystyle \sum_{i=5}^{20} 1$ \\
+			\item $\displaystyle \sum_{i=m}^{m+1} 1$\\
+
+		\end{enumerate}
+	
+		\item Utilize a decomposição de frações para calcular:
+		\[
+		\sum_{k=1}^{10} \frac{1}{k(k+1)}
+		\]
+
+	\end{enumerate}
+
+\end{frame}
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros naturais}
+    
+\textbf{Soma dos \( n \) primeiros números naturais:}
+\[
+\displaystyle \sum_{i=1}^{n} i = \frac{n(n+1)}{2}
+\]
+\end{frame}
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros naturais}
+
+Exemplo: $\displaystyle \sum_{i=1}^{100} i = 1+2+3+...+99+100$
+    
+Observamos que: \hspace{1cm} $1 + 100 = 101$
+
+\hspace{4cm}  $2 + 99 = 101$
+    
+\hspace{4cm} $3 + 98 = 101$
+
+\vspace{0.2cm}
+
+Encontramos $50$ resultados iguais a $101$, ou seja, a soma poderia ser encontrada fazendo $50 \cdot 101 = 5050.$
+
+\vspace{0.2cm}
+
+Podemos reescrever esse resultado na forma $\displaystyle \frac{100}{2} .(100+1).$
+
+\vspace{0.2cm}
+
+Então podemos conjecturar que $\displaystyle \sum_{i=1}^{n} i = \frac{n(n+1)}{2}.$
+
+\vspace{0.2cm}
+
+Para demonstração formal, utilizamos o Princípio da Indução Finita.
+
+\end{frame}
+
+\begin{frame}{Atividade}
+
+\begin{itemize}
+\item  Calcule o valor de $\displaystyle \frac{1+2+3+4+\cdots + 11}{3+4+5+\cdots + 12}$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Atividade}
+
+\begin{itemize}
+		\item Prove que:
+		\[
+		\sum_{k=1}^{n} (2k-1) = n^2
+		\]
+\end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros quadrados}
+    \textbf{Soma dos quadrados dos \( n \) primeiros números naturais:}
+    \[
+    \displaystyle \sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
+    \]
+\end{frame}
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros quadrados}
+Sabemos que 
+	
+	$$
+	(n+1)^3=n^3+3n^2+3n+1
+	$$
+	
+	Então 
+	
+	para $n=1$, temos
+	
+	$$(1+1)^3 = 2^3 = 1^3+3.1^2+3.1+1$$
+	
+	para $n=2$, temos
+	
+	$$(2+1)^3 = 3^3 = 2^3+3.2^2+3.2+1$$
+	
+	para $n=3$, temos
+	
+	$$(3+1)^3 = 4^3 = 3^3+3.3^2+3.3+1$$
+
+\end{frame}
+    
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros quadrados}
+	
+	Vamos somar os termos seguintes e simplificar
+	
+	$$2^3 = 1^3+3.1^2+3.1+1$$
+	$$3^3 = 2^3+3.2^2+3.2+1$$
+	$$4^3 = 3^3+3.3^2+3.3+1$$
+	$$5^3 = 4^3+3.4^2+3.4+1$$
+	$$\vdots$$
+	$$(n+1)^3=n^3+3n^2+3n+1$$
+	
+	ficamos com
+	
+	$$(n+1)^3 = 1^3 + 3.1^2+3.1+1 + 3.2^2+3.2+1 + 3.3^2+3.3+1 + ... +
+	3n^2+3n+1$$
+
+    \end{frame}
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros quadrados}
+        
+	ou seja
+	$$(n+1)^3 = 1 + 3.(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) + 3( 1+2+3+4+...+n) + n $$
+	usando a fórmula para a soma dos n primeiros inteiros
+	
+	$$(n+1)^3 = 3.(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) + 3\frac{n(n+1)}{2} + n + 1 $$
+	multiplicando toda a equação por 2
+	$$2(n+1)^3 = 2.3.(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) + 3n(n+1) + 2(n+1) $$
+	isolando a soma dos quadrados
+	$$2(n+1)^3 - 3n(n+1) - 2(n+1) = 6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2)$$
+	colocando $(n+1)$ em evidência
+	$$6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = (n+1)[2(n+1)^2 - 3n - 2]$$
+	
+    \end{frame}
+
+\begin{frame}{Exemplo Clássico: Soma dos n primeiros quadrados}
+    
+    Temos
+	$$6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = (n+1)[2(n^2+2n+1) - 3n - 2]$$
+	
+	$$6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = (n+1)[2n^2+4n+2 - 3n - 2]$$
+	
+	$$6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = (n+1)[2n^2+n]$$
+	
+	$$6(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = (n+1)n(2n+1)$$
+	
+	$$(1^2 + 2^2 + 3^2 + 4^2 + ...+ n^2) = \frac{n(n+1)(2n+1)}{6}$$
+	Então podemos escrever
+		\[
+	\sum_{i=1}^{n} i^2 = \frac{n(n+1)(2n+1)}{6}
+	\]
+	
+    
+\end{frame}
+
+
+\begin{frame}{Atividade}
+
+\begin{itemize}
+\item Calcule o valor de $\displaystyle (1+2+3+4+\cdots 10)^2$
+
+\item Calcule $\displaystyle 1^2+2^2+3^2+4^2+\cdots + 10^2$ 
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Atividades}
+
+Utilize as fórmulas de somatórios para calcular:
+
+\begin{itemize}
+		\item \( \displaystyle  \sum_{k=1}^{20} k \) 
+		\item \( \displaystyle  \sum_{k=1}^{8} k^2 \) 
+		\item \( \displaystyle  \sum_{k=1}^{10} k^3 \) (Dica: ultilize a fórmula para $(n+1)^4$ e repita o raciocínio feito para a soma dos quadrados)
+\end{itemize}
+
+\end{frame}
+        
+
+
+\begin{frame}{Aplicações}
+    
+    
+    Essa notação é amplamente usada em diversas áreas da matemática e computação, como:
+    \begin{itemize}
+        \item Análise de algoritmos
+        \item Estatística
+        \item Inteligência artificial
+    \end{itemize}
+\end{frame}
+
+\end{document}
